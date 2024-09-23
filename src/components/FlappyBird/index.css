@@ -26,14 +26,15 @@
   
   .bird {
     position: absolute;
-    width: 70px;
+    width: 50px;
     height: 50px;
-    background: url('https://res.cloudinary.com/dtf1kbume/image/upload/v1726146986/229-2298921_transparent-sprite-clipart-flappy-bird-free-sprites-hd_urr24p.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50px;
     transition: transform 0.2s;
+    pointer-events: none;
+    background: no-repeat; /* Ensures transparent background */
+    border: none;
+    background-size: contain;
+    border-radius: 50%;
+    background-image: url('https://res.cloudinary.com/dtf1kbume/image/upload/v1726467462/free-png-flappy-bird-fly-transparent-png-image-with-flying-cartoon-bird-11562961211c6zsdplhjd_p0r6lw.png');
   }
   
   .bird-upside-down {
@@ -44,18 +45,19 @@
     position: absolute;
     width: 70px;
     background-image: url('https://res.cloudinary.com/dtf1kbume/image/upload/v1726197889/top_bysqft.png');
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
   }
   
   .pipe-bottom {
     position: absolute;
-    width: 78px;
-    background-image: url('https://res.cloudinary.com/dtf1kbume/image/upload/v1726197409/183-1831473_flappy-bird-pipe-png-flappy-bird-pipe-transparent_mgahim.png');
-    background-size: cover;
+    width: 75px;
+    background-image: url('https://res.cloudinary.com/dtf1kbume/image/upload/v1726553796/6d2a698f31595a1_xwcene.png');
+    background-size: 105% 105%;
     background-repeat: no-repeat;
     background-position: center;
+    
   }
   
   .instructions {
@@ -74,11 +76,25 @@
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
+    
   }
   
   .score-top {
     font-size: 40px;
     color: white;
+  }
+  
+  .game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Add background to make text more readable */
+    padding: 20px;
+    border-radius: 10px;
   }
   
   .instructions {
@@ -93,14 +109,6 @@
     padding: 20px;
     border-radius: 10px;
   }
+ 
   
-  .game-over {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 24px;
-    color: white;
-    text-align: center;
-  }
   
